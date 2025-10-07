@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECA - Direitos dos Estudantes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ====== RESET ====== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* BACKGROUND */
+    body {
+        background: linear-gradient(135deg, #7b7681 0%, #8c8f94 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    /* CONTAINER PRINCIPAL */
+    .main-container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        padding: 25px 20px;
+        width: 100%;
+        max-width: 800px;
+        animation: fadeIn 0.6s ease-out;
+        margin: 10px 0;
+    }
+
+    /* HEADER */
+    .header-section {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+        text-align: center;
+    }
+    .header-section .logo-title img:last-child {
+        width: 200px;
+        height: 100px;
+    }
+
+    .logo-title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .logo-title img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+        color: #4776E6;
+        font-weight: 700;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        color: #666;
+        font-style: italic;
+        line-height: 1.3;
+    }
+
+
+
+    /* NAVEGAÇÃO */
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .nav-btn {
+        background: linear-gradient(to right, #4776E6, #8E54E9);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 0.9rem;
+        text-decoration: none;
+        text-align: center;
+        min-width: 120px;
+    }
+
+    .nav-btn:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+
+    .nav-btn.active {
+        background: linear-gradient(to right, #509b49, #468f56);
+    }
+
+    /* CONTEÚDO */
+    .content-section {
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+        margin: 20px 0 12px;
+        color: #4776E6;
+        border-left: 4px solid #4776E6;
+        padding-left: 12px;
+    }
+
+    .content-section p {
+        margin-bottom: 16px;
+        color: #555;
+        line-height: 1.6;
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .content-section p:last-child {
+        margin-bottom: 0;
+    }
+
+    .highlight {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #509b49;
+        margin: 20px 0;
+    }
+
+    .law-reference {
+        background-color: #e8f4fd;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #4776E6;
+        margin: 20px 0;
+        font-style: italic;
+    }
+
+    /* FOOTER */
+    .footer {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #f0f0f0;
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+        .main-container {
+            padding: 20px 15px;
+        }
+        
+        .logo-title {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .logo-title img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .text-content h1 {
+            font-size: 1.7rem;
+        }
+        
+        .nav-menu {
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            min-width: 100px;
+        }
+        
+        .content-section h2 {
+            font-size: 1.3rem;
+        }
+        
+        .content-section p {
+            font-size: 0.95rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            padding: 10px;
+        }
+        
+        .main-container {
+            padding: 15px 12px;
+            border-radius: 12px;
+        }
+        
+        .nav-menu {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Cabeçalho -->
+    <div class="header-section">
+      <div class="logo-title">
+        <img src="https://images.vexels.com/media/users/3/205462/isolated/preview/87b34912ed9f8d2900754c38220faac6-ilustracao-da-pilha-de-livros.png" alt="Logo CESUPA">
+        <img src="https://www2.cesupa.br/ConhecaCesupa/GuiadeMarcaCESUPA/imgMarca/Logo%20Cesupa%20Original%20(sem%20descritivo).png" alt="">
+      </div>
+      
+      <!-- Menu de Navegação -->
+      <div class="nav-menu">
+        <a href="index.html" class="nav-btn">Início</a>
+        <a href="DireitosDosEstudantes.html" class="nav-btn active">Direitos</a>
+        <a href="quiz.html" class="nav-btn">Quiz</a>
+        <a href="sobrenos.html" class="nav-btn">Sobre nós</a>
+      </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="content-section">
+      <h2>ECA e Direitos dos Estudantes</h2>
+      
+      <p>Os direitos fundamentais das crianças e adolescentes são garantias previstas na Constituição Federal de 1988 e no Estatuto da Criança e do Adolescente (ECA). Eles asseguram que toda criança e jovem seja tratado como sujeito de direitos, com prioridade absoluta em questões de saúde, educação, dignidade e proteção contra qualquer forma de violência ou discriminação.</p>
+      
+      <div class="law-reference">
+        <p><strong>Artigo 227 da Constituição Federal:</strong> "É dever da família, da sociedade e do Estado assegurar à criança, ao adolescente e ao jovem, com absoluta prioridade, o direito à vida, à saúde, à alimentação, à educação, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade e à convivência familiar e comunitária."</p>
+      </div>
+      
+      <p>Muitos jovens desconhecem que a Constituição, em seu artigo 227, determina que é dever da família, do Estado e da sociedade garantir o pleno desenvolvimento da criança e do adolescente. Isso significa que a proteção não é apenas responsabilidade da escola ou do governo, mas também da comunidade e da família.</p>
+      
+      <p>O ECA, criado em 1990, reforça esse compromisso ao estabelecer normas específicas para garantir educação de qualidade, respeito à individualidade, liberdade e convivência familiar e comunitária. Ele também prevê a obrigação de assegurar igualdade de condições para o acesso e permanência na escola.</p>
+      
+      <p>Conhecer esses direitos é o primeiro passo para reivindicá-los. Quando um estudante sabe que tem direito a estudar em um ambiente seguro, inclusivo e que respeite sua dignidade, ele se sente mais confiante para cobrar melhorias da escola e do poder público.</p>
+      
+      <p>Além disso, compreender os direitos fundamentais fortalece a cidadania. Um aluno que entende seus direitos e deveres pode contribuir ativamente na comunidade escolar, participar de conselhos estudantis e lutar contra injustiças que afetam ele e seus colegas.</p>
+      
+      <p>Portanto, falar sobre os direitos fundamentais não é apenas repetir o que a lei já prevê, mas mostrar na prática que toda criança e adolescente merece respeito, proteção e oportunidades para crescer e realizar seus sonhos.</p>
+
+      <h2>Educação como Direito Fundamental</h2>
+      
+      <p>A educação é um dos pilares dos direitos fundamentais no Brasil. A Constituição Federal (art. 205) afirma que ela é direito de todos e dever do Estado e da família. Isso quer dizer que não se trata de um privilégio, mas de uma obrigação legal.</p>
+      
+      <p>No contexto escolar, isso significa garantir acesso e permanência dos alunos na escola. Infelizmente, muitos jovens abandonam os estudos por falta de recursos, necessidade de trabalhar ou desmotivação. Essa realidade é um reflexo da ausência de políticas públicas eficazes, mas também do desconhecimento sobre os direitos garantidos pelo ECA.</p>
+      
+      <div class="highlight">
+        <p><strong>Artigo 53 do ECA:</strong> "A criança e o adolescente têm direito à educação, visando ao pleno desenvolvimento de sua pessoa, preparo para o exercício da cidadania e qualificação para o trabalho."</p>
+      </div>
+      
+      <p>O Estatuto da Criança e do Adolescente reforça que o estudante tem direito não apenas a frequentar a escola, mas a usufruir de um ensino de qualidade, com infraestrutura adequada, professores preparados e ambiente de respeito. A evasão escolar, portanto, não pode ser vista apenas como escolha individual, mas como falha na efetivação desse direito.</p>
+      
+      <p>Além da educação básica, é essencial que os jovens recebam orientação sobre como prosseguir os estudos, seja em cursos técnicos, faculdades ou programas de capacitação. O desconhecimento sobre esses caminhos aprofunda desigualdades sociais e restringe oportunidades.</p>
+      
+      <p>Por isso, a conscientização é fundamental: quando os estudantes sabem que têm direito a bolsas, transporte escolar, alimentação e apoio pedagógico, passam a enxergar a escola como espaço de oportunidades e não como uma obrigação distante de sua realidade.</p>
+      
+      <p>Garantir o direito à educação é garantir futuro. Mais que diplomas, trata-se de oferecer condições para que cada criança e adolescente desenvolva seu potencial e contribua para a transformação de sua comunidade.</p>
+    </div>
+
+    <div class="footer">
+      <p>Projeto Educacional - CESUPA • Direito 2º Semestre</p>
+    </div>
+  </div>
+</body>
+</html>
